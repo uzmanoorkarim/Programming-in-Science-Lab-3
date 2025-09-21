@@ -8,19 +8,23 @@ def polar_to_cartesian(r, theta):
     x = round(r*math.cos(angle_radians),5)
     y = round(r*math.sin(angle_radians),5)
     return (x, y)
+# Inputs
 r = float(input("Enter r coordinate:"))
 theta = float(input("Enter theta:"))
+# Output
 print(f"{polar_to_cartesian(r, theta)}")
 
 # Function 2(30): Convert Cartesian coordinates (x,y) to polar coordinates (r,θ).
 # This function should take the Cartesian coordinates (x,y) as input and return the polar coordinates (r,θ).
 def cartesian_to_polar(x, y):
-    angle_radians = math.radians(theta)
     r = round(math.sqrt(x**2 + y**2),5)
     theta = round(math.atan(x/y),5)
+    angle_radians = math.radians(theta)
     return (r, angle_radians)
+# Inputs
 x = float(input("Enter x coordinate:"))
 y = float(input("Enter y coordinate:"))
+# Output
 print(f"{cartesian_to_polar(x,y)}")
 
 # Function 3 (40): Calculate the position of pendulum for (A, f, ϕ, t).
@@ -30,8 +34,10 @@ def pendulum_position(A, f, phi, t):
     angle_radians = math.radians(phi)
     position = A*math.cos(omega*t + angle_radians)
     return position
+# Inputs
 A = float(input("Enter amplitude:"))
 f = float(input("Enter frequency:"))
 phi = float(input("Enter phi:"))
 t = float(input("Enter time:"))
+# Output
 print(f"{pendulum_position(A, f, phi, t)}")
